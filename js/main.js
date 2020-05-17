@@ -1,10 +1,9 @@
-// Select DOM Items
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItems = document.querySelectorAll(".nav-item");
-// Set Initial State Of Menu
+// Alapbol összecsukva
 let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
@@ -17,7 +16,7 @@ function toggleMenu() {
     menuBranding.classList.add("show");
     navItems.forEach(item => item.classList.add("show"));
 
-    // Set Menu State
+    // Összecsukva
     showMenu = true;
   } else {
     menuBtn.classList.remove("close");
@@ -26,11 +25,11 @@ function toggleMenu() {
     menuBranding.classList.remove("show");
     navItems.forEach(item => item.classList.remove("show"));
 
-    // Set Menu State
+    // Ez itt kell
     showMenu = false;
   }
 }
-//Material Boxed
+//cuccok
 
 const mb = document.querySelectorAll(".materialboxed");
 M.Materialbox.init(mb, {});
